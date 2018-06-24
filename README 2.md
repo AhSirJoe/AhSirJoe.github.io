@@ -1,1 +1,0 @@
-# ahsirjoe.github.io
