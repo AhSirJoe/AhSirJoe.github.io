@@ -95,8 +95,8 @@ section h2 {
 }
 
 #mainNav {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
   font-weight: 700;
   font-family: 'Montserrat';
 }
@@ -115,7 +115,7 @@ section h2 {
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link:hover {
-  color: #18BC9C;
+  color: #9999ff;
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link:active, #mainNav .navbar-nav li.nav-item a.nav-link:focus {
@@ -123,7 +123,7 @@ section h2 {
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link.active {
-  color: #18BC9C;
+  color: #9999ff;
 }
 
 #mainNav .navbar-toggler {
@@ -133,8 +133,8 @@ section h2 {
 
 @media (min-width: 992px) {
   #mainNav {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
     -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
     -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
     transition: padding-top 0.3s, padding-bottom 0.3s;
@@ -157,8 +157,8 @@ section h2 {
     background: #18BC9C;
   }
   #mainNav.navbar-shrink {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
   }
   #mainNav.navbar-shrink .navbar-brand {
     font-size: 1.5em;
@@ -166,7 +166,7 @@ section h2 {
 }
 
 header.masthead {
-  padding-top: calc(6rem + 72px);
+  padding-top: calc(6rem + 60px);
   padding-bottom: 6rem;
 }
 
@@ -182,7 +182,7 @@ header.masthead h2 {
 
 @media (min-width: 992px) {
   header.masthead {
-    padding-top: calc(6rem + 106px);
+    padding-top: calc(6rem + 90px);
     padding-bottom: 6rem;
   }
   header.masthead h1 {
@@ -225,6 +225,7 @@ header.masthead h2 {
   .portfolio {
     margin-bottom: -30px;
   }
+  .img-fluid {width:50%;}
   .portfolio .portfolio-item {
     margin-bottom: 30px;
   }
@@ -380,23 +381,12 @@ a:focus, a:hover, a:active {
 }
 
 /*new css here*/
-#special {
-  background-image: url(../img/bluebox.png);
-}
+.special {max-width: 15rem;padding: 0;text-align: center;border: none;border-top: solid 0.25rem;margin-top: 2.5rem;margin-bottom: 2.5rem;border-color: #fff;}
 
-#special:after {
-  position: relative;
-  top: -.8em;
-  display: inline-block;
-  padding: 0 0.25em;
-  content: '\f005';
-  font-family: FontAwesome;
-  font-size: 2em;
-  color: #fff;
-  background-image: url(../img/header-bg.jpg);
-}
+.special:after {position: relative;top: -.8em;display: inline-block;padding: 0 0.25em;content: '\f005';font-family: FontAwesome;font-size: 2em;color: #fff;background-image: url(../img/header-bg.jpg);}
 
 hr.star-light,
+hr.star-ice,
 hr.star-dark {
   max-width: 15rem;
   padding: 0;
@@ -408,6 +398,7 @@ hr.star-dark {
 }
 
 hr.star-light:after,
+hr.star-ice:after,
 hr.star-dark:after {
   position: relative;
   top: -.8em;
@@ -422,12 +413,22 @@ hr.star-light {
   border-color: #fff;
 }
 
+hr.star-ice {border-color: #fff;} hr.star-ice:after {color:#fff;background-image:url(../img/bluebox.png);}
+
 max-width: 15rem;padding: 0;text-align: center;border: none;border-top: solid 0.25rem;margin-top: 2.5rem;margin-bottom: 2.5rem;
   
   position: relative;top: -.8em;display: inline-block;padding: 0 0.25em;content: '\f005';font-family: FontAwesome;font-size: 2em;
 }
 
+.new-p {margin-bottom: 30px}
+
 hr.star-light:after {
   color: #fff;
   background-color: #18BC9C;
+}
+
+@media (max-width: 450px) {
+  .img-fluid {
+    padding-top:100px;
+  }
 }
